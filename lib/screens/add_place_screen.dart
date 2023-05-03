@@ -81,13 +81,13 @@ class _AddPlacesScreenState extends State<AddPlacesScreen> {
               ),
             ),
           ),
-          RaisedButton.icon(
+          ElevatedButton.icon(
             onPressed: _savePlace,
             icon: const Icon(Icons.add),
             label: const Text('Add Place'),
-            color: Theme.of(context).accentColor,
-            elevation: 0,
-            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            // color: Theme.of(context).accentColor,
+            // elevation: 0,
+            // materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
           ),
         ],
       ),

@@ -104,17 +104,17 @@ class _LocationInputState extends State<LocationInput> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FlatButton.icon(
+            OutlinedButton.icon(
               onPressed: _getCurrentLocationData,
               icon: const Icon(Icons.location_on),
               label: const Text('Current Location'),
-              textColor: Theme.of(context).primaryColor,
+              // textColor: Theme.of(context).primaryColor,
             ),
-            FlatButton.icon(
+            OutlinedButton.icon(
               onPressed: _selectOnMap,
               icon: const Icon(Icons.map),
               label: const Text('Select From Map'),
-              textColor: Theme.of(context).primaryColor,
+              // textColor: Theme.of(context).primaryColor,
             ),
           ],
         ),
@@ -149,7 +149,7 @@ class _LocationInputState extends State<LocationInput> {
   // }
 
   void onError(PlacesAutocompleteResponse response) {
-    homeScaffoldKey.currentState!.showSnackBar(
+    ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text("error")),
     );
   }
@@ -197,7 +197,7 @@ class _LocationInputState extends State<LocationInput> {
 
       //widget.onSelectPlace(lat, lng);
 
-      scaffold?.showSnackBar(
+      ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("${p.description} - $lat/$lng")),
       );
     }
